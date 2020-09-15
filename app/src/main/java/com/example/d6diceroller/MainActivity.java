@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageViewDice;
     private Random rng = new Random();
     private MediaPlayer diceRollMP;
+    private MediaPlayer winMP;
+    private MediaPlayer lossMP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +34,21 @@ public class MainActivity extends AppCompatActivity {
     private void rollDice() {
         int randomNum = rng.nextInt(20) + 1;
 
-        diceRollMP = MediaPlayer.create(this, R.raw.dice_roll);
-        diceRollMP.start();
-
         TextView critHitTextView = (TextView) findViewById(R.id.crit_hit_id);
         TextView critMissTextView = (TextView) findViewById(R.id.crit_miss_id);
+
+        winMP = MediaPlayer.create(this, R.raw.win);
+        lossMP = MediaPlayer.create(this, R.raw.loss);
+
+        diceRollMP = MediaPlayer.create(this, R.raw.dice_roll);
+        diceRollMP.start();
 
         switch (randomNum) {
             case 1:
                 imageViewDice.setImageResource(R.drawable.michigan_1);
                 critMissTextView.setVisibility(View.VISIBLE);
                 critHitTextView.setVisibility(View.INVISIBLE);
+                lossMP.start();
                 break;
             case 2:
                 imageViewDice.setImageResource(R.drawable.michigan_state_2);
@@ -138,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 imageViewDice.setImageResource(R.drawable.ohio_state_20);
                 critHitTextView.setVisibility(View.VISIBLE);
                 critMissTextView.setVisibility(View.INVISIBLE);
+                winMP.start();
                 break;
         }
     }
