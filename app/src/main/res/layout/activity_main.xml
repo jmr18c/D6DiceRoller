@@ -17,4 +17,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/initial_pic" />
 
+    <TextView
+        android:id="@+id/crit_hit_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/crit_hit"
+        android:textAlignment="center"
+        android:textColor="@color/buckeyeRed"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_dice" />
+
+    <TextView
+        android:id="@+id/crit_miss_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/crit_miss"
+        android:textAlignment="center"
+        android:textColor="@color/michiganBlue"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_dice" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
