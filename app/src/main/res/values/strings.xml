@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">D20 College Football Dice Roller</string>
+    <string name="app_name">D20 CFB</string>
+    <string name="main_name">D20 College Football Dice Roller</string>
     <string name="crit_hit">CRITICAL HIT!!\nGo Bucks!</string>
     <string name="crit_miss">CRITICAL MISS!!\nBoo Michigan!</string>
 </resources>
